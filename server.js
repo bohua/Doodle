@@ -9,7 +9,6 @@ var http = require('http');
 var path = require('path');
 var db = require('./models');
 var security = require('./routes/security');
-var reports = require('./routes/reports');
 
 var app = express();
 
@@ -37,7 +36,6 @@ app.get('/', platform.loadJsScript);
 app.get('/getLeftMenu', platform.getLeftMenu);
 app.get('/getLocationArray', platform.getLocationArray);
 app.post('/login', security.userLogin);
-app.get('/getReport', reports);
 
 db
 	.sequelize
