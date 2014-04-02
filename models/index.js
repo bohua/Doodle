@@ -5,7 +5,7 @@ var fs = require('fs')
 	, path = require('path')
 	, Sequelize = require('sequelize')
 	, lodash = require('lodash')
-	, sequelize = new Sequelize('bleach', 'root', 'root')
+	, sequelize = new Sequelize('doodle', 'root', 'root')
 	, db = {};
 
 fs

@@ -1,6 +1,7 @@
 /**
  * Created by Bli on 2014/4/1.
  */
+var Sequelize = require('sequelize');
 
 module.exports = function (sequelize) {
 
@@ -51,10 +52,13 @@ module.exports = function (sequelize) {
 	},{
 		classMethods: {
 			associate: function (models) {
-				RSDA_MASTER.hasOne(models.RSDA_EXTRA);
+				RSDA_MASTER
+					.hasOne(models.RSDA_SOCIAL_SECURITY)
+					.hasOne(models.RSDA_FIRST_BIRTH)
+					.hasOne(models.RSDA_OTHER_INFO);
 			}
 		}
 	});
 
-	return User;
+	return RSDA_MASTER;
 };
