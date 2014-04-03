@@ -7,46 +7,83 @@
 	},
 
 	{
-		"id": "production",
-		"title": "生产报表",
+		"id": "management",
+		"title": "人事管理",
 		"icon": "icon-meter-fast",
 		"submenus": [
 			{
-				"id": "productionDailyReport",
-				"title": "日报表",
+				"id": "rsdaBrowse",
+				"title": "浏览",
 				"icon": "icon-stats-up",
-				"link": "#/production/productionDailyReport"
+				"link": "#/rsda/browse"
 			},
 			{
-				"id": "productionMonthlyReport",
-				"title": "月报表",
+				"id": "rsdaModify",
+				"title": "新增",
 				"icon": "icon-calendar",
-				"link": "#/production/productionMonthlyReport"
+				"link": "#/rsda/modify"
 			},
 			{
-				"id": "productionCustomReport",
-				"title": "自由查询",
+				"id": "rsdaQuery",
+				"title": "查询",
 				"icon": "icon-equalizer",
-				"link": "#/production/productionCustomReport"
+				"link": "#/rsda/query"
 			}
 		]
 	},
 
 	{
-		"id": "water",
-		"title": "水质分析",
+		"id": "movement",
+		"title": "调动管理",
 		"icon": "icon-droplet"
 	},
 
 	{
-		"id": "medicine",
-		"title": "药量分析",
+		"id": "contract",
+		"title": "合同管理",
 		"icon": "icon-lab"
 	},
 
 	{
-		"id": "system",
-		"title": "电量分析",
+		"id": "salary",
+		"title": "工资管理",
+		"icon": "icon-power"
+	},
+
+	{
+		"id": "training",
+		"title": "培训管理",
+		"icon": "icon-power"
+	},
+
+	{
+		"id": "performance",
+		"title": "绩效考核",
+		"icon": "icon-power"
+	},
+
+	{
+		"id": "bonus",
+		"title": "奖惩管理",
+		"icon": "icon-power"
+	},
+
+	{
+		"id": "bonus",
+		"title": "奖惩管理",
+		"icon": "icon-power"
+	},
+
+	{
+		"id": "bonus",
+		"title": "奖惩管理",
+		"icon": "icon-power"
+	},
+
+	{
+		"id": "bonus",
+		"title": "奖惩管理",
 		"icon": "icon-power"
 	}
+
 ]
