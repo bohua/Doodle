@@ -144,10 +144,12 @@ t {
   background-color: #eeeeee;
   border-right: 1px solid #d9d9d9;
   z-index: 20;
-}
-#left-stage:not(.narrow-menu) {
-  overflow-y: auto;
-  overflow-x: hidden;
+  /*
+  &:not(.narrow-menu){
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+*/
 }
 #left-stage nav {
   background-color: #eeeeee;
@@ -290,4 +292,7 @@ t {
 }
 #preload-mask .loader-title .login-button:hover {
   color: #ffffff;
+}
+.doodle-form-sheet {
+  padding: 20px;
 }
