@@ -7,82 +7,146 @@
 	},
 
 	{
-		"id": "management",
-		"title": "人事管理",
+		"id": "rsda",
+		"title": "人事档案",
 		"icon": "icon-meter-fast",
 		"submenus": [
 			{
-				"id": "rsdaBrowse",
-				"title": "浏览",
+				"id": "dall",
+				"title": "档案浏览",
 				"icon": "icon-stats-up",
-				"link": "#/rsda/browse"
+				"link": "#/rsda/dall"
 			},
 			{
-				"id": "rsdaModify",
-				"title": "新增",
+				"id": "xzjl",
+				"title": "新增记录",
 				"icon": "icon-calendar",
-				"link": "#/rsda/modify"
+				"link": "#/rsda/xzjl"
 			},
 			{
-				"id": "rsdaQuery",
-				"title": "查询",
+				"id": "rscx",
+				"title": "人事查询",
 				"icon": "icon-equalizer",
-				"link": "#/rsda/query"
+				"link": "#/rsda/rscx"
 			}
 		]
 	},
 
 	{
-		"id": "movement",
+		"id": "ddgl",
 		"title": "调动管理",
-		"icon": "icon-droplet"
+		"icon": "icon-droplet",
+		"submenus": [
+			{
+				"id": "ygjz",
+				"title": "员工就职",
+				"icon": "icon-stats-up",
+				"link": "#/ddgl/ygjz"
+			},
+			{
+				"id": "rsdd",
+				"title": "人事调动",
+				"icon": "icon-calendar",
+				"link": "#/ddgl/rsdd"
+			},
+			{
+				"id": "lzdj",
+				"title": "离职登记",
+				"icon": "icon-equalizer",
+				"link": "#/ddgl/lzdj"
+			},
+			{
+				"id": "fzdj",
+				"title": "复职登记",
+				"icon": "icon-equalizer",
+				"link": "#/ddgl/fzdj"
+			},
+			{
+				"id": "ydcx",
+				"title": "异动查询",
+				"icon": "icon-equalizer",
+				"link": "#/ddgl/ydcx"
+			}
+		]
 	},
 
 	{
-		"id": "contract",
+		"id": "htgl",
 		"title": "合同管理",
-		"icon": "icon-lab"
+		"icon": "icon-lab",
+		"submenus": [
+			{
+				"id": "htdj",
+				"title": "合同登记",
+				"icon": "icon-stats-up",
+				"link": "#/htgl/htdj"
+			},{
+				"id": "sydq",
+				"title": "试用到期",
+				"icon": "icon-stats-up",
+				"link": "#/htgl/sydq"
+			},{
+				"id": "htdq",
+				"title": "合同到期",
+				"icon": "icon-stats-up",
+				"link": "#/htgl/htdq"
+			}
+		]
 	},
 
 	{
-		"id": "salary",
+		"id": "gzgl",
 		"title": "工资管理",
-		"icon": "icon-power"
+		"icon": "icon-power",
+		"submenus": [
+			{
+				"id": "gzlr",
+				"title": "工资录入",
+				"icon": "icon-stats-up",
+				"link": "#/gzgl/gzlr"
+			}
+		]
 	},
 
 	{
-		"id": "training",
+		"id": "pxgl",
 		"title": "培训管理",
 		"icon": "icon-power"
 	},
 
 	{
-		"id": "performance",
+		"id": "jxkh",
 		"title": "绩效考核",
 		"icon": "icon-power"
 	},
 
 	{
-		"id": "bonus",
+		"id": "jcgl",
 		"title": "奖惩管理",
 		"icon": "icon-power"
 	},
 
 	{
-		"id": "bonus",
-		"title": "奖惩管理",
+		"id": "jcsj",
+		"title": "基础数据",
 		"icon": "icon-power"
 	},
 
 	{
-		"id": "bonus",
-		"title": "奖惩管理",
+		"id": "cxhz",
+		"title": "查询汇总",
 		"icon": "icon-power"
 	},
 
 	{
-		"id": "bonus",
-		"title": "奖惩管理",
+		"id": "fzgn",
+		"title": "辅助功能",
+		"icon": "icon-power"
+	},
+
+	{
+		"id": "xtsz",
+		"title": "系统设置",
 		"icon": "icon-power"
 	}
 

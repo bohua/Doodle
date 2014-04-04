@@ -6,6 +6,14 @@ angular.module('left-menu', [])
 		$http.get('/getLeftMenu')
 			.success(function (data) {
 				$scope.menus = data;
+
+
+				$timeout(function(){
+					$('#left-stage').find('[data-role=dropdown]').dropdown();
+					$('#left-stage').find('.pull-menu, .menu-pull').each(function () {
+						$(this).PullDown();
+					});
+				},1);
 			});
 
 		$scope.toggleStatus = 'expand';
