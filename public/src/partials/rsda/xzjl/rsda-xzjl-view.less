@@ -1,0 +1,24 @@
+#rsda-xzjl-form{
+  @span-unit: 7;
+  @margin-unit: 20;
+
+  .row .span1{
+    width: ~"@{span-unit}%" !important;
+  }
+  
+  .row .span2{
+    width: ~"calc(@{span-unit}*2% + @{margin-unit}px)" !important;
+  }
+
+  .row .span3{
+    width: ~"calc(@{span-unit}*3% + @{margin-unit}*2px)" !important;
+  }
+
+  .row .span4{
+    width: ~"calc(@{span-unit}*4% + @{margin-unit}*3px)" !important;
+  }
+
+  select{
+    height: 34px;
+  }
+}

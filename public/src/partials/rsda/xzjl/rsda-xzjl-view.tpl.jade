@@ -1,11 +1,167 @@
 //Created by Bli on 2014/4/4.
 
-form.grid.doodle-form-sheet
-	fieldset.row
-		div.span5
-			label 姓名
-			div.input-control.text(data-role="input-control")
-				input(type="text", placeholder="输入姓名")
-				button.btn-clear
+form#rsda-xzjl-form.grid.doodle-form-sheet
+	fieldset
+		legend 个人信息
+		div.expandable-section(ng-show="showPersonalInfoSection")
+			div.row
+				div.span2
+					label 姓名
+					div.input-control.text(data-role="input-control")
+						input(type="text", placeholder="输入姓名", ng-model="model.name")
+						button.btn-clear
+				div.span2
+					label 缩写
+					div.input-control.text(data-role="input-control")
+						input(type="text", placeholder="缩写")
+						button.btn-clear
+				div.span1
+					label 性别
+					div.input-control.select
+						select
+							option(value="" )
+							option(value="0" ) 男
+							option(value="1" ) 女
+				div.span2
+					label 出生日期
+					div.input-control.text(data-role="datepicker")
+						input(type="text", placeholder="选择生日")
+						button.btn-date
+				div.span1
+					label 年龄
+					div.input-control.text
+						input(type="text", placeholder="自动", disabled)
+				div.span2
+					label 政治面貌
+					div.input-control.select
+						select
+							option(value="" )
+							option(value="1" ) 群众
+							option(value="2" ) 团员
+							option(value="3" ) 党员
 
+			div.row
+				div.span2
+					label 民族
+					div.input-control.select
+						select
+							option(value="" )
+				div.span2
+					label 婚否
+					div.input-control.select
+						select
+							option(value="" )
+							option(value="1" ) 未婚
+							option(value="2" ) 已婚
+				div.span2
+					label 生份证号
+					div.input-control.text
+						input(type="text", placeholder="身份证号")
+				div.span2
+					label 学历
+					div.input-control.select
+						select
+							option(value="" )
+							option(value="8" ) 博士
+							option(value="7" ) 硕士
+							option(value="6" ) 本科
+							option(value="5" ) 大专
+							option(value="4" ) 中专
+							option(value="3" ) 高中
+							option(value="2" ) 初中
+							option(value="1" ) 无
+				div.span2
+					label 学位
+					div.input-control.select
+						select
+							option(value="" )
+							option(value="1" ) 群众
+							option(value="2" ) 团员
+							option(value="3" ) 党员
+			div.row
+				div.span4
+					label 毕业院校
+					div.input-control.text
+						input(type="text", placeholder="毕业学校/学院")
 
+				div.span4
+					label 专业
+					div.input-control.text
+						input(type="text", placeholder="所学专业")
+
+				div.span2
+					label 毕业时间
+					iv.input-control.text(data-role="datepicker")
+						input(type="text", placeholder="毕业时间")
+						button.btn-date
+
+		legend 职能信息
+		div.expandable-section(ng-show="showCareerInfoSection")
+			div.row
+				div.span3
+					label 所属部门
+					div.input-control.select
+						select
+							option(value="" )
+				div.span2
+					label 职位
+					div.input-control.select
+						select
+							option(value="" )
+				div.span2
+					label 身份
+					div.input-control.text
+						input(type="text", placeholder="身份")
+				div.span3
+					label 行政级别
+					div.input-control.select
+						select
+							option(value="" )
+
+			div.row
+				div.span2
+					label 雇佣性质
+					div.input-control.select
+						select
+							option(value="" )
+							option(value="1" ) 全民合同工
+							option(value="2" ) 集体合同工
+							option(value="3" ) 临时合同工
+				div.span2
+					label 参加工作时间
+					div.input-control.text(data-role="datepicker")
+						input(type="text", placeholder="选择日期")
+						button.btn-date
+				div.span2
+					label 工龄
+					div.input-control.text
+						input(type="text", placeholder="自动", disabled)
+				div.span2
+					label 参加本单位时间
+					div.input-control.text(data-role="datepicker")
+						input(type="text", placeholder="选择日期")
+						button.btn-date
+				div.span2
+					label 本单位工龄
+					div.input-control.text
+						input(type="text", placeholder="自动", disabled)
+
+			div.row
+				div.span3
+					label 职称
+					div.input-control.select
+						select
+							option(value="" )
+				div.span2
+					label 获得职称时间
+					div.input-control.text(data-role="datepicker")
+						input(type="text", placeholder="选择日期")
+						button.btn-date
+
+		legend 联系方式
+		div.expandable-section(ng-show="showContactInfoSection")
+			div.row
+
+		legend 工资信息
+		div.expandable-section(ng-show="showSalaryInfoSection")
+			div.row

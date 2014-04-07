@@ -55,6 +55,9 @@ t {
   z-index: 10;
   height: calc(100% - 50px);
 }
+#view-port {
+  overflow-y: auto;
+}
 #top-bar,
 .top-bar-wrapper {
   position: relative;
@@ -293,6 +296,27 @@ t {
 #preload-mask .loader-title .login-button:hover {
   color: #ffffff;
 }
+#rsda-xzjl-form .row .span1 {
+  width: 7% !important;
+}
+#rsda-xzjl-form .row .span2 {
+  width: calc(7*2% + 20px) !important;
+}
+#rsda-xzjl-form .row .span3 {
+  width: calc(7*3% + 20*2px) !important;
+}
+#rsda-xzjl-form .row .span4 {
+  width: calc(7*4% + 20*3px) !important;
+}
+#rsda-xzjl-form select {
+  height: 34px;
+}
 .doodle-form-sheet {
-  padding: 20px;
+  padding: 0 20px;
+}
+.doodle-form-sheet legend {
+  padding-top: 10px !important;
+}
+.doodle-form-sheet .row {
+  margin-top: 0 !important;
 }
