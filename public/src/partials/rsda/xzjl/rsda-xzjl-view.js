@@ -17,4 +17,5 @@ angular.module('rsda-xzjl-view', ['ngRoute'])
 			$scope.model = {};
 			$scope.showPersonalInfoSection = true;
 			$scope.showCareerInfoSection = true;
+			$scope.showContactInfoSection = true;
 		}]);

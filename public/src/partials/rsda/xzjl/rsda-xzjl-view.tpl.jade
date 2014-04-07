@@ -57,6 +57,7 @@ form#rsda-xzjl-form.grid.doodle-form-sheet
 					label 生份证号
 					div.input-control.text
 						input(type="text", placeholder="身份证号")
+						button.btn-clear
 				div.span2
 					label 学历
 					div.input-control.select
@@ -83,12 +84,12 @@ form#rsda-xzjl-form.grid.doodle-form-sheet
 					label 毕业院校
 					div.input-control.text
 						input(type="text", placeholder="毕业学校/学院")
-
+						button.btn-clear
 				div.span4
 					label 专业
 					div.input-control.text
 						input(type="text", placeholder="所学专业")
-
+						button.btn-clear
 				div.span2
 					label 毕业时间
 					iv.input-control.text(data-role="datepicker")
@@ -112,6 +113,7 @@ form#rsda-xzjl-form.grid.doodle-form-sheet
 					label 身份
 					div.input-control.text
 						input(type="text", placeholder="身份")
+						button.btn-clear
 				div.span3
 					label 行政级别
 					div.input-control.select
@@ -161,6 +163,54 @@ form#rsda-xzjl-form.grid.doodle-form-sheet
 		legend 联系方式
 		div.expandable-section(ng-show="showContactInfoSection")
 			div.row
+				div.span4
+					label 家庭住址
+					div.input-control.text
+						input(type="text", placeholder="家庭住址")
+						button.btn-clear
+				div.span2
+					label 籍贯
+					div.input-control.text
+						input(type="text", placeholder="籍贯")
+						button.btn-clear
+				div.span2
+					label 手机
+					div.input-control.text
+						input(type="text", placeholder="手机")
+						button.btn-clear
+				div.span2
+					label 电话
+					div.input-control.text
+						input(type="text", placeholder="电话")
+						button.btn-clear
+			div.row
+				div.span3
+					label 电子邮件
+					div.input-control.text
+						input(type="text", placeholder="电子邮件")
+						button.btn-clear
+				div.span2
+					label 住房
+					div.input-control.select
+						select
+							option(value="" )
+							option(value="1" ) 单位住房
+							option(value="2" ) 集体宿舍
+							option(value="3" ) 个人住房
+							option(value="4" ) 个人购房
+							option(value="5" ) 其它住房
+				div.span2
+					label 暂住人口
+					div.input-control.checkbox
+						label
+							input(type="checkbox")
+							span.check
+							span 是,属于暂住人口
+				div.span3
+					label 暂住证号
+					div.input-control.text
+						input(type="text", placeholder="暂住证号")
+						button.btn-clear
 
 		legend 工资信息
 		div.expandable-section(ng-show="showSalaryInfoSection")
