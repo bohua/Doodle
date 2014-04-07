@@ -3,7 +3,11 @@
   src: url('/fonts/iconFont.eot');
   src: local('/fonts/iconFont'), local('/fonts/iconFont'), url("/fonts/iconFont.woff") format("woff"), url("/fonts/iconFont.otf") format("opentype"), url("/fonts/iconFont.svg") format("svg");
 }
-tspan {
+tspan,
+legend,
+label,
+input,
+select {
   font-family: 'Microsoft Yahei';
 }
 th {

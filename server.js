@@ -37,7 +37,7 @@ app.get('/', platform.loadJsScript);
 app.get('/getLeftMenu', platform.getLeftMenu);
 app.get('/getLocationArray', platform.getLocationArray);
 app.post('/login', security.userLogin);
-app.get('/rsda/:rsda_id', )
+app.get('/rsda/:rsda_id', rsda.getRsdaModel);
 
 db
 	.sequelize
