@@ -26,7 +26,7 @@ form#rsda-xzjl-form.grid.doodle-form-sheet
 					label 出生日期
 					div.input-control.text(data-role="datepicker")
 						input(type="text", placeholder="选择生日")
-						button.btn-date
+						button.btn-date(tabindex="-1")
 				div.span1
 					label 年龄
 					div.input-control.text
@@ -94,7 +94,7 @@ form#rsda-xzjl-form.grid.doodle-form-sheet
 					label 毕业时间
 					iv.input-control.text(data-role="datepicker")
 						input(type="text", placeholder="毕业时间")
-						button.btn-date
+						button.btn-date(tabindex="-1")
 
 		legend 职能信息
 		div.expandable-section(ng-show="showCareerInfoSection")
@@ -133,7 +133,7 @@ form#rsda-xzjl-form.grid.doodle-form-sheet
 					label 参加工作时间
 					div.input-control.text(data-role="datepicker")
 						input(type="text", placeholder="选择日期")
-						button.btn-date
+						button.btn-date(tabindex="-1")
 				div.span2
 					label 工龄
 					div.input-control.text
@@ -142,7 +142,7 @@ form#rsda-xzjl-form.grid.doodle-form-sheet
 					label 参加本单位时间
 					div.input-control.text(data-role="datepicker")
 						input(type="text", placeholder="选择日期")
-						button.btn-date
+						button.btn-date(tabindex="-1")
 				div.span2
 					label 本单位工龄
 					div.input-control.text
@@ -158,7 +158,7 @@ form#rsda-xzjl-form.grid.doodle-form-sheet
 					label 获得职称时间
 					div.input-control.text(data-role="datepicker")
 						input(type="text", placeholder="选择日期")
-						button.btn-date
+						button.btn-date(tabindex="-1")
 
 		legend 联系方式
 		div.expandable-section(ng-show="showContactInfoSection")
@@ -205,7 +205,7 @@ form#rsda-xzjl-form.grid.doodle-form-sheet
 						label
 							input(type="checkbox")
 							span.check
-							span 是,属于暂住人口
+							span 是, 暂住人口
 				div.span3
 					label 暂住证号
 					div.input-control.text

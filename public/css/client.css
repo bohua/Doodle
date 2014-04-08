@@ -3,6 +3,14 @@
   src: url('/fonts/iconFont.eot');
   src: local('/fonts/iconFont'), local('/fonts/iconFont'), url("/fonts/iconFont.woff") format("woff"), url("/fonts/iconFont.otf") format("opentype"), url("/fonts/iconFont.svg") format("svg");
 }
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  min-height: 600px;
+  min-width: 1024px;
+}
 tspan,
 legend,
 label,
@@ -68,7 +76,7 @@ t {
   z-index: 300;
   height: 50px;
   width: 100%;
-  background-color: #eeeeee;
+  background-color: #1ec8a6;
   border-bottom: 1px solid #d9d9d9;
   margin: 0;
 }
@@ -76,7 +84,7 @@ t {
 .top-bar-wrapper #search-box-caption {
   float: left;
   font-size: 15px;
-  color: #343539;
+  color: #ffffff;
   margin: 14px 0 0 20px;
 }
 #top-bar .row,
@@ -102,7 +110,7 @@ t {
 #top-bar #top-bar-center-title t,
 .top-bar-wrapper #top-bar-center-title t {
   font-size: 22px;
-  color: #343539;
+  color: #ffffff;
 }
 #top-bar #top-bar-right-button-panel,
 .top-bar-wrapper #top-bar-right-button-panel {
@@ -124,13 +132,13 @@ t {
 }
 #top-bar #top-bar-right-button-panel ul a::after,
 .top-bar-wrapper #top-bar-right-button-panel ul a::after {
-  color: #343539;
+  color: #ffffff;
 }
 #top-bar #top-bar-right-button-panel ul i,
 .top-bar-wrapper #top-bar-right-button-panel ul i,
 #top-bar #top-bar-right-button-panel ul t,
 .top-bar-wrapper #top-bar-right-button-panel ul t {
-  color: #343539;
+  color: #ffffff;
   margin-left: 10px;
 }
 #top-bar #top-bar-right-button-panel ul .dropdown-menu,
@@ -253,6 +261,9 @@ t {
   margin: 0;
   padding: 10px 20px;
 }
+#router-guide nav ul a:not(:hover) {
+  background-color: #ddd;
+}
 #router-guide nav ul a:hover {
   background-color: #1ec8a6;
   color: #ffffff;
@@ -315,6 +326,11 @@ t {
 #rsda-xzjl-form select {
   height: 34px;
 }
+#rsda-xzjl-form .expandable-section {
+  background-color: rgba(248, 248, 248, 0.8);
+  padding: 0 0 0 20px;
+  border: 1px solid #d9d9d9;
+}
 .doodle-form-sheet {
   padding: 0 20px;
 }
@@ -323,4 +339,7 @@ t {
 }
 .doodle-form-sheet .row {
   margin-top: 0 !important;
+}
+.doodle-form-sheet .input-control.text input:focus {
+  padding-right: 25px !important;
 }
