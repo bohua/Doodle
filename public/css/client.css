@@ -68,7 +68,7 @@ t {
   height: calc(100% - 50px);
 }
 #view-port {
-  overflow-y: auto;
+  overflow: hidden;
 }
 #top-bar,
 .top-bar-wrapper {
@@ -311,28 +311,44 @@ t {
 #preload-mask .loader-title .login-button:hover {
   color: #ffffff;
 }
+#rsda-xzjl-form {
+  width: 100%;
+  height: 100%;
+}
+#rsda-xzjl-form .tab-control {
+  height: 100%;
+}
+#rsda-xzjl-form .tab-control .frames {
+  height: calc(100% - 35px);
+}
+#rsda-xzjl-form .tab-control .frames .frame {
+  height: 100%;
+  overflow-y: auto;
+}
 #rsda-xzjl-form .row .span1 {
-  width: 7% !important;
+  width: 7.5% !important;
 }
 #rsda-xzjl-form .row .span2 {
-  width: calc(7*2% + 20px) !important;
+  width: calc(7.5*2% + 20px) !important;
 }
 #rsda-xzjl-form .row .span3 {
-  width: calc(7*3% + 20*2px) !important;
+  width: calc(7.5*3% + 20*2px) !important;
 }
 #rsda-xzjl-form .row .span4 {
-  width: calc(7*4% + 20*3px) !important;
+  width: calc(7.5*4% + 20*3px) !important;
 }
 #rsda-xzjl-form select {
   height: 34px;
 }
 #rsda-xzjl-form .expandable-section {
   background-color: rgba(248, 248, 248, 0.8);
-  padding: 0 0 0 20px;
+  padding: 0 0 0 8px;
   border: 1px solid #d9d9d9;
 }
 .doodle-form-sheet {
-  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  padding: 10px 5px 0 5px;
 }
 .doodle-form-sheet legend {
   padding-top: 10px !important;
