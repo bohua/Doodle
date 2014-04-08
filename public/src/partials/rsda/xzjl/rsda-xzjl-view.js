@@ -14,13 +14,20 @@ angular.module('rsda-xzjl-view', ['ngRoute'])
 			$.Metro.initInputs();
 			$.Metro.initDatepickers();
 
+			$timeout(function(){
+				$.Metro.initTabs();
+			},100);
+
+
 			$scope.model = {};
 			$scope.showPersonalInfoSection = true;
 			$scope.showCareerInfoSection = true;
 			$scope.showContactInfoSection = true;
 
 
-			$scope.save = function(){
+			$scope.save = function($event){
+				$event.preventDefault();
+				$event.stopPropagation();
 				console.log('saved!');
 			};
 		}]);

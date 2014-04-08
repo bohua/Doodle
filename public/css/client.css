@@ -318,6 +318,9 @@ t {
 #rsda-xzjl-form .tab-control {
   height: 100%;
 }
+#rsda-xzjl-form .tab-control ul > li > a > i {
+  margin-right: 5px;
+}
 #rsda-xzjl-form .tab-control .frames {
   height: calc(100% - 35px);
 }
@@ -344,6 +347,17 @@ t {
   background-color: rgba(248, 248, 248, 0.8);
   padding: 0 0 0 8px;
   border: 1px solid #d9d9d9;
+}
+#rsda-xzjl-form .rsda-xzjl-func-button {
+  margin-right: 20px;
+}
+#rsda-xzjl-form .rsda-xzjl-func-button i {
+  color: #343539;
+  font-size: 25px;
+  cursor: pointer;
+}
+#rsda-xzjl-form .rsda-xzjl-func-button a:hover i {
+  color: #aaaaaa;
 }
 .doodle-form-sheet {
   width: 100%;

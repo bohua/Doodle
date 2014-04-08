@@ -1,46 +1,65 @@
-#rsda-xzjl-form{
+#rsda-xzjl-form {
   @span-unit: 7.5;
   @margin-unit: 20;
 
   width: 100%;
   height: 100%;
 
-  .tab-control{
+  .tab-control {
     height: 100%;
 
-    .frames{
+    ul > li > a > i {
+      margin-right: 5px;
+    }
+
+    .frames {
       height: ~"calc(100% - 35px)";
 
-      .frame{
+      .frame {
         height: 100%;
         overflow-y: auto;
       }
     }
   }
 
-  .row .span1{
+  .row .span1 {
     width: ~"@{span-unit}%" !important;
   }
-  
-  .row .span2{
+
+  .row .span2 {
     width: ~"calc(@{span-unit}*2% + @{margin-unit}px)" !important;
   }
 
-  .row .span3{
+  .row .span3 {
     width: ~"calc(@{span-unit}*3% + @{margin-unit}*2px)" !important;
   }
 
-  .row .span4{
+  .row .span4 {
     width: ~"calc(@{span-unit}*4% + @{margin-unit}*3px)" !important;
   }
 
-  select{
+  select {
     height: 34px;
   }
 
-  .expandable-section{
+  .expandable-section {
     background-color: @grey-light;
     padding: 0 0 0 8px;
     border: 1px solid @grey-border;
+  }
+
+  .rsda-xzjl-func-button {
+    margin-right: 20px;
+    i {
+      color: @black-bg;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    a:hover{
+      i {
+        color: @grey-dark;
+      }
+    }
   }
 }
