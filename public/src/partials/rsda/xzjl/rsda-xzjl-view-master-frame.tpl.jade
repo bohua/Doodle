@@ -18,8 +18,8 @@ fieldset
 			div.span1
 				label 性别
 				div.input-control.select
-					select(ng-model="rsda_model.py")
-						option(value="" )
+					select(ng-model="rsda_model.xb")
+						option(value="", default, selected) 无
 						option(value="0" ) 男
 						option(value="1" ) 女
 			div.span2
@@ -79,6 +79,11 @@ fieldset
 						option(value="2" ) 团员
 						option(value="3" ) 党员
 		div.row
+			div.span2
+				label 毕业时间
+				iv.input-control.text(data-role="datepicker")
+					input(type="text", placeholder="毕业时间", ng-model="rsda_model.bysj")
+					button.btn-date(tabindex="-1")
 			div.span4
 				label 毕业院校
 				div.input-control.text
@@ -89,11 +94,6 @@ fieldset
 				div.input-control.text
 					input(type="text", placeholder="所学专业", ng-model="rsda_model.zy")
 					button.btn-clear
-			div.span2
-				label 毕业时间
-				iv.input-control.text(data-role="datepicker")
-					input(type="text", placeholder="毕业时间", ng-model="rsda_model.bysj")
-					button.btn-date(tabindex="-1")
 
 	legend
 		span.text-muted 职能信息

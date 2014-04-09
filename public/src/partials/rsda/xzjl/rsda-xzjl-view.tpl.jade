@@ -28,20 +28,30 @@ form#rsda-xzjl-form.grid.doodle-form-sheet
 					i.icon-copy
 					span 证照
 
-
 			div.place-right.rsda-xzjl-func-button
 				a.hint--bottom(data-hint="清空", ng-mousedown="empty($event)")
 					i.icon-remove
-
+			div.place-right.rsda-xzjl-func-button
+				a.hint--bottom(data-hint="导出", ng-mousedown="export($event)")
+					i.icon-file-excel
+			div.place-right.rsda-xzjl-func-button
+				a.hint--bottom(data-hint="打印", ng-mousedown="print($event)")
+					i.icon-printer
 			div.place-right.rsda-xzjl-func-button
 				a.hint--bottom(data-hint="保存", ng-mousedown="save($event)")
 					i.icon-download
 
 
 		div.frames
-			div.frame#_page_rsda_master(ng-include="'/src/partials/rsda/xzjl/rsda-xzjl-view-master-frame.tpl.html'")
-			div.frame#_page_rsda_extra(ng-include="'/src/partials/rsda/xzjl/rsda-xzjl-view-extra-frame.tpl.html'")
-			div.frame#_page_rsda_family(ng-include="'/src/partials/rsda/xzjl/rsda-xzjl-view-family-frame.tpl.html'")
-			div.frame#_page_rsda_experience(ng-include="'/src/partials/rsda/xzjl/rsda-xzjl-view-experience-frame.tpl.html'")
-			div.frame#_page_rsda_skill(ng-include="'/src/partials/rsda/xzjl/rsda-xzjl-view-skill-frame.tpl.html'")
-			div.frame#_page_rsda_certificate(ng-include="'/src/partials/rsda/xzjl/rsda-xzjl-view-certificate-frame.tpl.html'")
+			div.frame#_page_rsda_master
+				include rsda-xzjl-view-master-frame.tpl.jade
+			div.frame#_page_rsda_extra
+				include rsda-xzjl-view-extra-frame.tpl.jade
+			div.frame#_page_rsda_family
+				include rsda-xzjl-view-family-frame.tpl.jade
+			div.frame#_page_rsda_experience
+				include rsda-xzjl-view-experience-frame.tpl.jade
+			div.frame#_page_rsda_skill
+				include rsda-xzjl-view-skill-frame.tpl.jade
+			div.frame#_page_rsda_certificate
+				include rsda-xzjl-view-certificate-frame.tpl.jade
