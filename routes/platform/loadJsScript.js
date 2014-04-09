@@ -41,6 +41,6 @@ module.exports = function (req, res) {
 			}
 		}
 
-		res.render('./src/platform/index/index', { title: 'Express', data: result });
+		res.render('./src/platform/index/index', { title: 'Joy HR', data: result });
 	});
 };

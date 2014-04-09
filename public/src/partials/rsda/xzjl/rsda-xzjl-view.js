@@ -11,18 +11,18 @@ angular.module('rsda-xzjl-view', ['ngRoute'])
 		'$http',
 		'$timeout',
 		function ($scope, $http, $timeout) {
-			$.Metro.initInputs();
-			$.Metro.initDatepickers();
-
 			$timeout(function(){
 				$.Metro.initTabs();
+				$.Metro.initInputs();
+				$.Metro.initDatepickers();
 			},100);
 
 
-			$scope.model = {};
+			$scope.rsda_model = {};
 			$scope.showPersonalInfoSection = true;
 			$scope.showCareerInfoSection = true;
 			$scope.showContactInfoSection = true;
+			$scope.showSalaryInfoSection = true;
 
 
 			$scope.save = function($event){
