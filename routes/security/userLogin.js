@@ -1,13 +1,13 @@
 /**
  * Created by Bli on 14-2-26.
  */
-var db = require(__dirname + '/../../models');
+//var db = require(__dirname + '/../../models');
 
 module.exports = function (req, res) {
 	var user_name = req.body.user_name;
 	var user_pass = req.body.user_pass;
 
-	db.User.find({
+	global.db.User.find({
 		where: {
 			user_name: user_name
 		}

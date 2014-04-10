@@ -1,5 +1,5 @@
 //Created by Bli on 2014/4/8.
-fieldset
+fieldset(keyboard-support)
 	legend
 		span.text-muted 个人信息
 		span.place-right.text-muted.doodle-legend Personal Info
@@ -8,7 +8,7 @@ fieldset
 			div.span2
 				label 姓名
 				div.input-control.text(data-role="input-control")
-					input(type="text", placeholder="输入姓名", ng-model="rsda_model.name")
+					input(type="text", placeholder="输入姓名", ng-model="rsda_model.name", autofocus, tab-start)
 					button.btn-clear
 			div.span2
 				label 缩写
@@ -273,7 +273,7 @@ fieldset
 			div.span4
 				label 银行帐号
 				div.input-control.text
-					input(type="text", placeholder="银行帐号", ng-model="rsda_model.banknumber")
+					input(type="text", placeholder="银行帐号", ng-model="rsda_model.banknumber", tab-end)
 					button.btn-clear
 
 

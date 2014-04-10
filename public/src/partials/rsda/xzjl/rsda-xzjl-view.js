@@ -1,7 +1,7 @@
 /**
  * Created by Bli on 2014/4/4.
  */
-angular.module('rsda-xzjl-view', ['ngRoute'])
+angular.module('rsda-xzjl-view', ['ngRoute', 'keyboard-support','rsda-resource'])
 	.config(['$routeProvider', function ($routeProvider) {
 		$routeProvider.
 			when('/rsda/xzjl', {templateUrl: '/src/partials/rsda/xzjl/rsda-xzjl-view.tpl.html', controller: 'rsdaXzjlViewController'});
@@ -10,7 +10,8 @@ angular.module('rsda-xzjl-view', ['ngRoute'])
 		'$scope',
 		'$http',
 		'$timeout',
-		function ($scope, $http, $timeout) {
+		'RSDA',
+		function ($scope, $http, $timeout, RSDA) {
 
 			$.Metro.initTabs();
 			$.Metro.initInputs();
@@ -27,6 +28,8 @@ angular.module('rsda-xzjl-view', ['ngRoute'])
 			$scope.save = function ($event) {
 				$event.preventDefault();
 				$event.stopPropagation();
-				console.log('saved!');
+
+				var rsda = new RSDA($scope.rsda_model);
+				rsda.$save();
 			};
 		}]);

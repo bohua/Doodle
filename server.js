@@ -38,6 +38,7 @@ app.get('/getLeftMenu', platform.getLeftMenu);
 app.get('/getLocationArray', platform.getLocationArray);
 app.post('/login', security.userLogin);
 app.get('/rsda/:rsda_id', rsda.getRsdaModel);
+app.post('/rsda', rsda.setRsdaModel);
 
 db
 	.sequelize
@@ -47,6 +48,9 @@ db
 			throw err;
 		} else {
 			http.createServer(app).listen(app.get('port'), function(){
+				global.db = db;
+				global.exception_handler = require( path.join(__dirname , 'server', 'exceptions', 'exception_handler.js'));
+
 				console.log('Express server listening on port ' + app.get('port'));
 			})
 		}
