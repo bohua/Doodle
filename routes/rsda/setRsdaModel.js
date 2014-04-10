@@ -7,7 +7,8 @@ module.exports = function (req, res) {
 	RsdaModel.create(req.body).success(function(rsda){
 		res.contentType('json');
 		res.json({
-			save_success: true
+			save_success: true,
+			model: rsda
 		});
 	});
 }
