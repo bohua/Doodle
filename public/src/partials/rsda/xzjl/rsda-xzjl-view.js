@@ -63,8 +63,8 @@ angular.module('rsda-xzjl-view', ['ngRoute', 'keyboard-support', 'rsda-resource'
 				showSocialInsuranceSection: true,
 				showBusinessInsuranceSection: true,
 				showAdditionalFundationsSection: true,
-				showContactPersonAndFunderSection: true
-
+				showContactPersonAndFunderSection: true,
+				showBirthStrategySection: true
 			}
 
 
