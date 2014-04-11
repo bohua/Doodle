@@ -140,5 +140,47 @@ fieldset(keyboard-support)
 			div.span5
 				label 联系人地址
 				div.input-control.text
-					input(type="text", placeholder="联系人地址", ng-model="rsda_model.rsda_social_security.lxr_addr", tab-end)
+					input(type="text", placeholder="联系人地址", ng-model="rsda_model.rsda_social_security.lxr_addr")
 					button.btn-clear
+
+	legend
+		span.text-muted 计划生育
+		span.place-right.text-muted.doodle-legend Birth Strategy
+	div.expandable-section(ng-show="expandableSection.showBirthStrategySection")
+		div.row
+			div.span4
+				label 准生证号
+				div.input-control.text
+					input(type="text", placeholder="准生证号", ng-model="rsda_model.rsda_first_birth.zszhao")
+					button.btn-clear
+			div.span4
+				label 独生子女证号
+				div.input-control.text
+					input(type="text", placeholder="独生子女证号", ng-model="rsda_model.rsda_first_birth.dsznzhao")
+					button.btn-clear
+			div.span2
+				label 子女数
+					div.input-control.text
+						input(type="text", placeholder="0", ng-model="rsda_model.rsda_first_birth.zns")
+						button.btn-clear
+		div.row
+			div.span2
+				label 本人生育次数
+				div.input-control.text
+					input(type="text", placeholder="0", ng-model="rsda_model.rsda_first_birth.brsycs")
+					button.btn-clear
+			div.span2
+				label 配偶生育次数
+				div.input-control.text
+					input(type="text", placeholder="0", ng-model="rsda_model.rsda_first_birth.posycs")
+					button.btn-clear
+			div.span2
+				label 节育措失
+				div.input-control.text
+					input(type="text", placeholder="节育措失", ng-model="rsda_model.rsda_first_birth.jycs")
+					button.btn-clear
+			div.span2
+				label 落实措施日期
+				div.input-control.text(data-role="datepicker")
+					input(type="text", placeholder="选择日期", ng-model="rsda_model.rsda_first_birth.lscs_date")
+					button.btn-date(tabindex="-1")
