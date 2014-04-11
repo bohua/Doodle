@@ -27,29 +27,45 @@ angular.module('rsda-xzjl-view', ['ngRoute', 'keyboard-support', 'rsda-resource'
 				locale: 'zhCN',
 				weekStart: -1,
 				selected: function (date) {
-					var model = $(this).get(0)._calendar.parent().find('input').attr('ng-model').split('.')[1];
+					var el = $(this).get(0)._calendar.parent().find('input')
+					var model = el.attr('ng-model').split('.')[1];
 
-					if(model){
+					if (model) {
 						$scope.rsda_model[model] = date;
 					}
 					$scope.$apply();
+
+					el.focus();
 				}
 			});
 
-			$timeout(function(){
-				$('#rsda-xzjl-form [data-role=datepicker] input').each(function(k, v){
+			/*
+			$timeout(function () {
+				$('#rsda-xzjl-form [data-role=datepicker] input').each(function (k, v) {
 					var model = $(v).attr('ng-model').split('.')[1];
 					$(v).val(today);
 					$scope.rsda_model[model] = today;
 					$scope.$apply();
 				});
 			}, 1);
-
+*/
 			$scope.rsda_model = {};
-			$scope.showPersonalInfoSection = true;
-			$scope.showCareerInfoSection = true;
-			$scope.showContactInfoSection = true;
-			$scope.showSalaryInfoSection = true;
+			$scope.rsda_model.rsda_social_security = {};
+
+			$scope.expandableSection = {
+				//基本资料
+				showPersonalInfoSection: true,
+				showCareerInfoSection: true,
+				showContactInfoSection: true,
+				showSalaryInfoSection: true,
+
+				//扩充资料
+				showSocialInsuranceSection: true,
+				showBusinessInsuranceSection: true,
+				showAdditionalFundationsSection: true,
+				showContactPersonAndFunderSection: true
+
+			}
 
 
 			$scope.save = function ($event) {

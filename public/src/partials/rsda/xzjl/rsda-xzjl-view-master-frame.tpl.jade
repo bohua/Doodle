@@ -3,7 +3,7 @@ fieldset(keyboard-support)
 	legend
 		span.text-muted 个人信息
 		span.place-right.text-muted.doodle-legend Personal Info
-	div.expandable-section(ng-show="showPersonalInfoSection")
+	div.expandable-section(ng-show="expandableSection.showPersonalInfoSection")
 		div.row
 			div.span2
 				label 姓名
@@ -98,7 +98,7 @@ fieldset(keyboard-support)
 	legend
 		span.text-muted 职能信息
 		span.place-right.text-muted.doodle-legend Occupation Details
-	div.expandable-section(ng-show="showCareerInfoSection")
+	div.expandable-section(ng-show="expandableSection.showCareerInfoSection")
 		div.row
 			div.span3
 				label 所属部门
@@ -162,7 +162,7 @@ fieldset(keyboard-support)
 	legend
 		span.text-muted 联系方式
 		span.place-right.text-muted.doodle-legend Contact Info
-	div.expandable-section(ng-show="showContactInfoSection")
+	div.expandable-section(ng-show="expandableSection.showContactInfoSection")
 		div.row
 			div.span4
 				label 家庭住址
@@ -216,7 +216,7 @@ fieldset(keyboard-support)
 	legend
 		span.text-muted 工资信息
 		span.place-right.text-muted.doodle-legend Salary Talk
-	div.expandable-section(ng-show="showSalaryInfoSection")
+	div.expandable-section(ng-show="expandableSection.showSalaryInfoSection")
 		div.row
 			div.span4
 				label 工资发放方式
