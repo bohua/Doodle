@@ -362,6 +362,13 @@ t {
 #rsda-xzjl-form .rsda-xzjl-func-button a:hover i {
   color: #aaaaaa;
 }
+table {
+  background-color: rgba(248, 248, 248, 0.8);
+}
+table a {
+  margin-left: 10px;
+  cursor: pointer;
+}
 .doodle-form-sheet {
   width: 100%;
   height: 100%;
@@ -378,4 +385,15 @@ t {
 }
 .doodle-form-sheet .doodle-legend {
   font-size: 16px;
+}
+.doodle-form-sheet label {
+  color: #696969;
+}
+.doodle-command-button {
+  background: #1ec8a6 !important;
+  color: #ffffff !important;
+}
+.doodle-command-button:hover {
+  border: 1px solid #aaaaaa;
+  color: #343539 !important;
 }

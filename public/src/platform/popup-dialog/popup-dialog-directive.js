@@ -11,28 +11,10 @@ angular.module('popup-dialog', [])
 				emitCancel : '&onCancel'
 			},
 			link: function ($scope, $element, $attributes) {
-				var template,
-					_onDialogShow;
-				switch ($attributes.dialogStyle) {
-					case 'comparison':
-					{
-						template = '/src/platform/popup-dialog/popup-dialog-comparison.tpl.html';
+				var _onDialogShow = $scope.dialogConfig.onShow,
+					template = $scope.dialogConfig.template;
 
-						_onDialogShow = function (_dialog) {
-							/*
-							$.extend(true, $scope.dialogConfig.calendarOption, {
-
-							});
-							*/
-
-							$('#comparison-dialog-calendar').calendar($scope.dialogConfig.calendarOption);
-							$('#comparison-dialog-calendar').calendar('setDate', $scope.dialogConfig.calendarOption.date);
-							$.Metro.initInputs();
-						}
-
-						break;
-					}
-				}
+				$scope.dialog_data_model = {};
 
 				if (template) {
 					$('<div></div>').load(template, function (response, status, xhr) {
@@ -51,11 +33,9 @@ angular.module('popup-dialog', [])
 					});
 				}
 
-				$scope.Compare = function(){
-					var compareDate = $('#comparison-dialog-calendar').calendar('getDate');
+				$scope.Confirm = function(){
 					$.Dialog.close();
-
-					$scope.emitCompare({date: compareDate});
+					$scope.emitCompare({date: $scope.dialog_data_model});
 				};
 
 				$scope.Cancel = function(){

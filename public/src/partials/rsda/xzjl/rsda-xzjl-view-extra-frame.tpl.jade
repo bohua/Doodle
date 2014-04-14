@@ -184,3 +184,27 @@ fieldset(keyboard-support)
 				div.input-control.text(data-role="datepicker")
 					input(type="text", placeholder="选择日期", ng-model="rsda_model.rsda_first_birth.lscs_date")
 					button.btn-date(tabindex="-1")
+		hr
+		div.row
+			div.span2
+				label 子女姓名
+				div.input-control.text
+					input(type="text", placeholder="子女姓名", ng-model="rsda_model.rsda_first_birth.rsda_first_birth_children[0].znxm")
+					button.btn-clear
+			div.span2
+				label 性别
+				div.input-control.select
+					select(ng-model="rsda_model.rsda_first_birth.rsda_first_birth_children[0].znxb")
+						option(value="", default, selected) 无
+						option(value="0" ) 男
+						option(value="1" ) 女
+			div.span2
+				label 生产方式
+				div.input-control.text
+					input(type="text", placeholder="生产方式", ng-model="rsda_model.rsda_first_birth.rsda_first_birth_children[0].scfs")
+					button.btn-clear
+			div.span2
+				label 生产日期
+				div.input-control.text(data-role="datepicker")
+					input(type="text", placeholder="选择日期", ng-model="rsda_model.rsda_first_birth.rsda_first_birth_children[0].sc_date")
+					button.btn-date(tabindex="-1")
