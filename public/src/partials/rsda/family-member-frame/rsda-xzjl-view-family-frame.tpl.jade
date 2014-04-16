@@ -31,6 +31,6 @@ fieldset
 
 		hr
 		div
-			button.doodle-command-button(ng-click="addFamilyMember()")
+			popup-dialog.doodle-command-button(dialog-config="familyMemberEditorConfig", on-comfirm="addFamilyMember(model)")
 				i.icon-plus-2
 				span  添加成员

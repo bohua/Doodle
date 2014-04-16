@@ -390,6 +390,8 @@ table a {
   color: #696969;
 }
 .doodle-command-button {
+  cursor: pointer;
+  padding: 5px 10px;
   background: #1ec8a6 !important;
   color: #ffffff !important;
 }

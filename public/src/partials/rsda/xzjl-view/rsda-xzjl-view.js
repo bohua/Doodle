@@ -1,10 +1,10 @@
 /**
  * Created by Bli on 2014/4/4.
  */
-angular.module('rsda-xzjl-view', ['ngRoute', 'keyboard-support', 'rsda-resource'])
+angular.module('rsda-xzjl-view', ['ngRoute', 'keyboard-support', 'rsda-resource', 'family-member-editor'])
 	.config(['$routeProvider', function ($routeProvider) {
 		$routeProvider.
-			when('/rsda/xzjl', {templateUrl: '/src/partials/rsda/xzjl/rsda-xzjl-view.tpl.html', controller: 'rsdaXzjlViewController'});
+			when('/rsda/xzjl', {templateUrl: '/src/partials/rsda/xzjl-view/rsda-xzjl-view.tpl.html', controller: 'rsdaXzjlViewController'});
 	}])
 	.controller('rsdaXzjlViewController', [
 		'$scope',
@@ -104,4 +104,25 @@ angular.module('rsda-xzjl-view', ['ngRoute', 'keyboard-support', 'rsda-resource'
 
 
 			$scope.addNewFamilyMember = true;
+			$scope.familyMemberEditorConfig = {
+				dialogOption: {
+					overlay: true,
+					shadow: true,
+					flat: true,
+					icon: '<i class="icon-home"></i>',
+					title: '家庭成员登记',
+					padding: 10,
+					width: 800,
+					height: 340
+				},
+
+				template: '/src/partials/rsda/family-member-frame/family-member-editor.tpl.html',
+
+				onShow: function(_dialogWin){
+					$.Metro.initInputs();
+					$.Metro.initDatepickers();
+					_dialogWin.find('.auto-focus').focus();
+				}
+			};
+
 		}]);

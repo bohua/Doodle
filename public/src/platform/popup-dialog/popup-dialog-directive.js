@@ -7,7 +7,7 @@ angular.module('popup-dialog', [])
 			restrict: 'E',
 			scope: {
 				dialogConfig: "=",
-				emitCompare : '&onCompare',
+				emitCompare : '&onConfirm',
 				emitCancel : '&onCancel'
 			},
 			link: function ($scope, $element, $attributes) {
