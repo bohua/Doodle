@@ -1,8 +1,12 @@
 /**
  * Created by Bli on 2014/4/4.
  */
-angular.module('rsda-xzjl-view', ['ngRoute', 'keyboard-support', 'rsda-resource', 'family-member-editor'])
-	.config(['$routeProvider', function ($routeProvider) {
+angular.module('rsda-xzjl-view', [
+	'ngRoute',
+	'keyboard-support',
+	'rsda-resource',
+	'family-member-frame'
+]).config(['$routeProvider', function ($routeProvider) {
 		$routeProvider.
 			when('/rsda/xzjl', {templateUrl: '/src/partials/rsda/xzjl-view/rsda-xzjl-view.tpl.html', controller: 'rsdaXzjlViewController'});
 	}])
@@ -54,26 +58,6 @@ angular.module('rsda-xzjl-view', ['ngRoute', 'keyboard-support', 'rsda-resource'
 			$scope.rsda_model.rsda_first_birth = {};
 			$scope.rsda_model.rsda_first_birth.rsda_first_birth_children = [];
 
-			$scope.rsda_model.rsda_family_member = [
-				{
-					jtcyxm: "王大头",
-					ybrgx: "父",
-					csrq: "1958/09/02",
-					gzdw: "阿里山造车厂",
-					drzw: "车间主任",
-					zzmm: "党员",
-					lxdh: "13987654302"
-				},{
-					jtcyxm: "黄三娘",
-					ybrgx: "母",
-					csrq: "1962/01/18",
-					gzdw: "天山养老护理三合一综合医疗中心下属第三分院护士中心",
-					drzw: "护士长",
-					zzmm: "平民",
-					lxdh: "0824-76543892"
-				}
-
-			];
 
 			$scope.expandableSection = {
 				//基本资料
@@ -101,28 +85,4 @@ angular.module('rsda-xzjl-view', ['ngRoute', 'keyboard-support', 'rsda-resource'
 				var rsda = new RSDA($scope.rsda_model);
 				rsda.$save();
 			};
-
-
-			$scope.addNewFamilyMember = true;
-			$scope.familyMemberEditorConfig = {
-				dialogOption: {
-					overlay: true,
-					shadow: true,
-					flat: true,
-					icon: '<i class="icon-home"></i>',
-					title: '家庭成员登记',
-					padding: 10,
-					width: 800,
-					height: 340
-				},
-
-				template: '/src/partials/rsda/family-member-frame/family-member-editor.tpl.html',
-
-				onShow: function(_dialogWin){
-					$.Metro.initInputs();
-					$.Metro.initDatepickers();
-					_dialogWin.find('.auto-focus').focus();
-				}
-			};
-
 		}]);
