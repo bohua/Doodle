@@ -2,13 +2,14 @@
  * Created by Bli on 2014/4/16.
  */
 
-angular.module('family-member-frame', ['family-member-editor'])
+angular.module('family-member-frame', [])
 	.controller('family-member-frame-controller', [
 		'$scope',
 		function ($scope) {
 
 			$scope.rsda_model.rsda_family_member = [
 				{
+					id: 1,
 					jtcyxm: "王大头",
 					ybrgx: "父",
 					csrq: "1958/09/02",
@@ -17,6 +18,7 @@ angular.module('family-member-frame', ['family-member-editor'])
 					zzmm: "党员",
 					lxdh: "13987654302"
 				},{
+					id: 2,
 					jtcyxm: "黄三娘",
 					ybrgx: "母",
 					csrq: "1962/01/18",
@@ -37,7 +39,8 @@ angular.module('family-member-frame', ['family-member-editor'])
 					title: '家庭成员登记',
 					padding: 10,
 					width: 800,
-					height: 340
+					height: 340,
+					overlayClickClose: false
 				},
 
 				template: '/src/partials/rsda/family-member-frame/family-member-editor.tpl.html',
@@ -48,4 +51,21 @@ angular.module('family-member-frame', ['family-member-editor'])
 					_dialogWin.find('.auto-focus').focus();
 				}
 			};
+
+			$scope.addFamilyMember = function(data){
+				if(data){
+					$scope.rsda_model.rsda_family_member.push($.extend(true, {} , data));
+				}
+
+				//TODO: Save action here
+		};
+
+			$scope.modifyFamilyMember = function($index){
+				var model = $scope.rsda_model.rsda_family_member[$index];
+				if(model){
+					$('popup-dialog').trigger('click', [model]);
+				}
+
+				//TODO: Save action here
+			}
 		}]);

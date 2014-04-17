@@ -395,3 +395,6 @@ t {
   border: 1px solid #aaaaaa;
   color: #343539 !important;
 }
+.ng-invalid {
+  background-color: #fac4c8;
+}
